@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modulo3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+      height: 150px;
+      padding: 20px;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  .form-style-9{
+    max-width: 950px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
+  }
+  .form-style-9 ul{
+      padding:0;
+      margin:0;
+      list-style:none;
+  }
+  .form-style-9 ul li{
+      display: block;
+      margin-bottom: 10px;
+      min-height: 45px;
+  }
+  .form-style-9 ul li  .field-style{
+      box-sizing: border-box; 
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box; 
+      padding: 8px;
+      outline: none;
+      border: 1px solid #B0CFE0;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+
+  }.form-style-9 ul li  .field-style:focus{
+      box-shadow: 0 0 5px #B0CFE0;
+      border:1px solid #B0CFE0;
+  }
+  .form-style-9 ul li .field-split{
+      width: 49%;
+  }
+  .form-style-9 ul li .field-full{
+      width: 100%;
+  }
+  .form-style-9 ul li input.align-left{
+      float:left;
+  }
+  .form-style-9 ul li input.align-right{
+      float:right;
+  }
+  .form-style-9 ul li textarea{
+      width: 100%;
+      height: 200px;
+  }
+  .form-style-9 ul li input[type="button"], 
+  .form-style-9 ul li input[type="submit"] {
+      -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+      box-shadow: inset 0px 1px 0px 0px #3985B1;
+      background-color: #216288;
+      border: 1px solid #17445E;
+      display: inline-block;
+      cursor: pointer;
+      color: #FFFFFF;
+      padding: 8px 18px;
+      text-decoration: none;
+      font: 12px Arial, Helvetica, sans-serif;
+  }
+  .form-style-9 ul li input[type="button"]:hover, 
+  .form-style-9 ul li input[type="submit"]:hover {
+      background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+      background-color: #28739E;
+  }
+  h1{
+    text-align: center;
+    color:black;
+  } 
+
+  form {
+                width:500px;
+                margin:50px auto;
+}
+.search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+.button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}
+
+table, td, th{
+        border:1px solid black;
+        text-align:center;
+        border-collapse:collapse;
+      }
+        #tb{
+         width:80%; 
+         margin-left:150px;  
+         margin-top: 70px;
+      }
+      #wiz{
+        background-color: grey;
+      }
+       #wiz1{
+        background-color: #F7DC6F;
+      }
+      th input{
+background-color: yellow;   
+}
+.highlight{
+        background-color:lightblue;
+        color:red;
+      }
+      table {
+border: 1px solid #00001F;
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 90px;
+
+}
+
+th, td {
+border: 1px solid #00001F;
+    text-align: center;
+    padding: 8px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #00001B;
+    color: white;
+}
+#saveEdit{
+text-align: center;
+background-color: black;
+border-radius: 10px;
+color: white;
+}
+#cent{
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Modulo3</h1>      
+    <p>Bid and Buy</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Get Selling/Biding:</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      <li><a href="https://localhost/eBay/products.html">Products</a></li>
+       <li><a href="https://localhost/eBay/postForm.html">Posts</a></li>
+        <li><a href="https://localhost/eBay/mybids.html">My bids</a></li>
+        <li><a href="https://localhost/eBay/myposts.html">My Posts</a></li>
+        <li><a href="https://localhost/eBay/bidsfmp.html">Bids for my Posts</a></li>
+    
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://localhost/eBay/account.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href ="https://localhost/eBay/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1>Your Account Details</h1>
+<div id="account" >
+<table id = "tb" contenteditable="true" class="table table-inverse">
+</table>
+<br>
+<div id="cent">
+<input type = "button" value = "Save Edits" id="saveEdit"/>
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>  
+  
+</footer>
+<script type="text/javascript">
+   $(document).ready(function(){
+    $("#tb").hide();
+    $.get("https://localhost/eBay/account.php",function(data,status){
+          if(data == 200)
+          {
+            alert(data);
+          }
+          else
+          {
+            tabledisplay(data);
+          }
+        });
+
+    function tabledisplay(data){
+    //  alert(data);
+      text = JSON.parse(data.split("::")[0]);
+      var table = document.getElementById("tb");
+      var tr = document.createElement("tr");
+      var tr1 = document.createElement("tr");
+      var tr2= document.createElement("tr");
+      var tr3 = document.createElement("tr");
+      var tr4 = document.createElement("tr");
+      var tr5 = document.createElement("tr");
+      var tr6 = document.createElement("tr");
+
+      var td = document.createElement("td");
+      var td1 = document.createElement("td");
+      var td2 = document.createElement("td");
+      var td3 = document.createElement("td");
+      var td4 = document.createElement("td");
+      var td5 = document.createElement("td");
+      var td6 = document.createElement("td");
+      var td7 = document.createElement("td");
+      var td8 = document.createElement("td");
+      var td9 = document.createElement("td");
+      var td10 = document.createElement("td");
+      var td11 = document.createElement("td");
+      var td12 = document.createElement("td");
+      var td13 = document.createElement("td");
+
+      td.innerHTML = text.username;
+      td.id = "un";
+
+      td5.innerHTML = "User Name";
+      tr.appendChild(td5);
+      tr.appendChild(td);
+      table.appendChild(tr);
+      td1.innerHTML = text.fullname;
+      td1.id="fn";
+
+       td6.innerHTML = "Full Name";
+      tr1.appendChild(td6);
+      tr1.appendChild(td1);
+      table.appendChild(tr1);
+      td2.innerHTML = text.address;
+      td2.id="ad";
+
+       td7.innerHTML = "Address";
+      tr2.appendChild(td7);
+      tr2.appendChild(td2);
+      td3.innerHTML = text.phone;
+      td3.id="ph";
+
+       td8.innerHTML = "Phone";
+      tr3.appendChild(td8);
+      tr3.appendChild(td3);
+      td4.innerHTML = text.email;
+      td4.id="em";
+
+       td9.innerHTML = "Email";
+      tr4.appendChild(td9);
+      tr4.appendChild(td4);
+
+
+      td10.innerHTML = text.lastlogin;
+     
+       td11.innerHTML = "Last Login";
+      tr5.appendChild(td11);
+      tr5.appendChild(td10);
+
+      td13.innerHTML = text.location;
+
+       td12.innerHTML = "Location";
+      tr6.appendChild(td12);
+      tr6.appendChild(td13);
+      table.appendChild(tr2);
+      table.appendChild(tr3);
+      table.appendChild(tr4);
+      table.appendChild(tr5);
+      table.appendChild(tr6);
+
+      $("#tb").show();
+    }
+
+    $("#saveEdit").click(function(e){
+
+      e.preventDefault();
+               // alert("testing");
+                $.ajax({
+                    url: "https://localhost/eBay/editAccount.php",
+                    type: "POST",
+                    data: { username: document.getElementById("un").innerHTML, fullname : document.getElementById("fn").innerHTML, email : document.getElementById("em").innerHTML, address : document.getElementById("ad").innerHTML, phone : document.getElementById("ph").innerHTML},
+                    success: function(result,status,xhr){
+                         //alert(result+":::"+status+":::"+xhr.status);
+                        if(result == "200200"){
+                            alert("Successfully Updated");
+                        }
+                        else{
+                            // alert(result);
+                            // alert(status);
+                            alert("Error occured. Please try again");
+                        }
+                    },
+                    error: function(text){
+                      //  alert("error");
+                        $("#test").html("not done");
+                    }
+
+                });
+
+});
+   });
+
+</script>
+</body>
+</html>

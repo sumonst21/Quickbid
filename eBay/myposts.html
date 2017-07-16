@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modulo3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+      height: 150px;
+      padding: 20px;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  .form-style-9{
+    max-width: 950px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
+  }
+  .form-style-9 ul{
+      padding:0;
+      margin:0;
+      list-style:none;
+  }
+  .form-style-9 ul li{
+      display: block;
+      margin-bottom: 10px;
+      min-height: 45px;
+  }
+  .form-style-9 ul li  .field-style{
+      box-sizing: border-box; 
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box; 
+      padding: 8px;
+      outline: none;
+      border: 1px solid #B0CFE0;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+
+  }.form-style-9 ul li  .field-style:focus{
+      box-shadow: 0 0 5px #B0CFE0;
+      border:1px solid #B0CFE0;
+  }
+  .form-style-9 ul li .field-split{
+      width: 49%;
+  }
+  .form-style-9 ul li .field-full{
+      width: 100%;
+  }
+  .form-style-9 ul li input.align-left{
+      float:left;
+  }
+  .form-style-9 ul li input.align-right{
+      float:right;
+  }
+  .form-style-9 ul li textarea{
+      width: 100%;
+      height: 200px;
+  }
+  .form-style-9 ul li input[type="button"], 
+  .form-style-9 ul li input[type="submit"] {
+      -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+      box-shadow: inset 0px 1px 0px 0px #3985B1;
+      background-color: #216288;
+      border: 1px solid #17445E;
+      display: inline-block;
+      cursor: pointer;
+      color: #FFFFFF;
+      padding: 8px 18px;
+      text-decoration: none;
+      font: 12px Arial, Helvetica, sans-serif;
+  }
+  .form-style-9 ul li input[type="button"]:hover, 
+  .form-style-9 ul li input[type="submit"]:hover {
+      background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+      background-color: #28739E;
+  }
+  h1{
+    text-align: center;
+    color:white;
+  } 
+
+  form {
+                width:500px;
+                margin:50px auto;
+}
+.search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+.button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}
+
+ table {
+border: 1px solid #00001F;
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 90px;
+
+}
+
+th, td {
+border: 1px solid #00001F;
+    text-align: center;
+    padding: 8px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #00001B;
+    color: white;
+}
+td:hover{
+  background-color: #00CED1;
+}
+        #tb{
+         width:80%; 
+         margin-left:150px;  
+         margin-top: 70px;
+      }
+      #wiz{
+        background-color: grey;
+      }
+       #wiz1{
+        background-color: #F7DC6F;
+      }
+.highlight{
+        background-color:lightblue;
+        color:red;
+      }
+input{
+color: black;
+width: 100%;
+}
+  </style>
+</head>
+  <body>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Modulo3</h1>      
+    <p>Bid and Buy</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Start Buying/Selling:</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       <li><a href="https://localhost/eBay/products.html">Products</a></li>
+       <li><a href="https://localhost/eBay/postForm.html">Posts</a></li>
+        <li><a href="https://localhost/eBay/mybids.html">My bids</a></li>
+        <li><a href="https://localhost/eBay/myposts.html">My Posts</a></li>
+        <li><a href="https://localhost/eBay/bidsfmp.html">Bids for my Posts</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://localhost/eBay/account.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+         <li><a href ="https://localhost/eBay/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+     <h1>Your Posts</h1>
+     <table id="tb" class="table table-inverse">
+      <tr>
+      <th><input type="button" value="Item"></th>
+      <th onclick="sortTable(1)"><input type="button" value="Initial Set Cost"></th>
+      <th onclick="sortTable(2)"><input type="button" value="Item Description"></th>
+      <th onclick="sortTable(3)"><input type="button" value="Auction Start time"></th>
+      <th onclick="sortTable(4)"><input type="button" value="Auction End time"></th>
+      <th></th>
+      </tr>
+      </table>
+
+
+      <script>
+          $(document).ready(function(){
+             $("#tb").hide();
+        $.get("https://localhost/eBay/myposts.php",function(data,status){
+         //alert(data);
+          if(data == "200200")
+          {
+            alert("There are no posts yet");
+          }
+          else
+          {
+            tabledisplay(data);
+          }
+        });
+
+        function tabledisplay(data){
+            
+          //alert(data);
+            var table = document.getElementById("tb");
+            //table.id = "searchtable";
+            //table.class="table table-inverse";
+           // table.innerHTML="";
+           // alert(text);
+           text = JSON.parse(data.split("::")[0]);
+          for(var i=0; i<text.items.length; i++){
+          // alert(text.items[i].shelf_stop);
+            
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var td4 = document.createElement("td");
+            var td5 = document.createElement("td");
+            td1.innerHTML =text.items[i].itemname;
+            tr.appendChild(td1);
+            td2.innerHTML = text.items[i].itemprice;
+            tr.appendChild(td2);
+            td3.innerHTML =text.items[i].itemdescription;
+            tr.appendChild(td3);
+            td4.innerHTML = text.items[i].shelf_start;
+            tr.appendChild(td4);
+            td5.innerHTML = text.items[i].shelf_stop;
+            tr.appendChild(td5);
+            var td0 = document.createElement("td");
+            var button = document.createElement("button");
+            //button.id =  text.items[i].itemid;
+            button.id='delIt';
+            button.class='btn btn-danger';
+            button.innerHTML = "DELETE";
+            td0.appendChild(button);
+            tr.appendChild(td0);
+           // alert(text.items[i].itemid);
+            tr.id = text.items[i].itemid;
+            table.appendChild(tr);
+
+        }
+        // $("#result").append(table);
+         $("#tb").show();
+        // $("#tr").show();
+  }
+
+var keys = {};
+  $(document).on('keydown', function(e) {
+          if(e.altKey){
+            keys[e.which] = true;
+            e.preventDefault();
+            $(document).on('mouseenter', "td", function() {
+            if(keys[e.which] == true){
+              $(this).addClass('highlight');
+              } 
+            });
+          }
+           
+          $(document).on('mouseleave', "td", function() {
+            $(this).removeClass('highlight');
+          });
+          
+         });
+          
+         $(document).on('keyup', function (e) {
+            delete keys[e.which];
+          }); 
+
+         $(document).on('click', '#delIt', function () {
+          itemid = $(this).closest("tr").attr("id");
+          //alert(itemid);
+          $.get("https://localhost/eBay/deletepost.php?itemid="+itemid, function(data, status){
+            //  alert(data);
+              if(data=="200"){
+                  alert("Delete Successful");
+              }
+              else{
+                   alert("Delete Failed");
+              }
+        
+            });
+           $(this).closest('tr').remove();
+           return false;
+         });
+      });
+          function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("tb");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+      </script>
+ </body>
+ </html>

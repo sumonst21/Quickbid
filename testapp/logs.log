@@ -1,0 +1,8 @@
+[2017-05-02 09:05:14] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache miss
+[2017-05-02 09:05:33] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache hit
+[2017-05-02 10:05:58] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache miss
+[2017-05-02 10:05:34] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache hit
+[2017-05-02 11:05:57] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache miss
+[2017-05-02 11:05:44] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache hit
+[2017-05-02 11:05:30] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache hit
+[2017-05-02 11:05:16] [E:\Apache24_1\htdocs\testapp\index.php] [info] cache miss

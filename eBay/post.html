@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Post Slider</title>
+	<link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style type="text/css">
+     table, td, th{
+        border:1px solid black;
+        text-align:center;
+        border-collapse:collapse;
+
+      }
+        #tb{
+         width:80%; 
+         margin-left:150px;  
+         margin-top: 70px;
+      }
+      #wiz{
+        background-color: grey;
+      }
+       #wiz1{
+        background-color: #F7DC6F;
+      }
+      th input{
+background-color: yellow;   
+}
+.highlight{
+        background-color:lightblue;
+        color:red;
+      }
+ </style>
+ </head>
+  <body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+     <ul class="nav navbar-nav navbar-center">
+      <li><a href=" ">Account Details</a></li>      
+      <li><a href="bid.html">My Bids</a></li>  
+      <li><a href="bidForMy.html">Posts for my Bids</a></li>  
+      <li><a href="post.html">My posts</a></li>   
+    </ul>
+     <ul class="nav navbar-nav navbar-right">
+        <li><a href=" ">Logout</a></li>   
+          </ul>
+  </div>
+</nav>
+<br/>
+     <h1>Your Posts</h1>
+     <table id="tb" class="table table-inverse">
+      <tr id="wiz">
+      <th onclick="sortTable(0)"><input type="button" value="Item"></th>
+      <th onclick="sortTable(1)"><input type="button" value="Initial Set Cost"></th>
+      <th onclick="sortTable(2)"><input type="button" value="Time"></th>
+      <th onclick="sortTable(3)"><input type="button" value="Item Description"></th>
+      <th onclick="sortTable(4)"><input type="button" value="Auction Start time"></th>
+      <th onclick="sortTable(5)"><input type="button" value="Auction End time"></th>
+      <th></th>
+      </tr>
+      <tr id="wiz1">
+      <td>Laptop</td>
+      <td>2000</td>
+      <td>10-00</td>
+      <td>1TB,8GB RAM</td>
+      <td>1</td>
+      <td>3</td>
+      <td><button class='btn btn-danger' id='delIt'>Delete row</button></td>
+      </tr>
+      </tr>
+      <tr id="wiz1">
+      <td>Phone</td>
+      <td>1000</td>
+      <td>20-00</td>
+      <td>32GB,4GB RAM</td>
+      <td>4</td>
+      <td>2</td>
+      <td><button class='btn btn-danger' id='delIt'>Delete row</button></td>
+      </tr>
+      </table>
+      <script>
+          $(document).ready(function(){
+var keys = {};
+  $(document).on('keydown', function(e) {
+          if(e.altKey){
+            keys[e.which] = true;
+            e.preventDefault();
+            $(document).on('mouseenter', "td", function() {
+            if(keys[e.which] == true){
+              $(this).addClass('highlight');
+              } 
+            });
+          }
+           
+          $(document).on('mouseleave', "td", function() {
+            $(this).removeClass('highlight');
+          });
+          
+         });
+          
+         $(document).on('keyup', function (e) {
+            delete keys[e.which];
+          }); 
+
+         $(document).on('click', '#delIt', function () {
+           $(this).closest('tr').remove();
+           return false;
+         });
+      });
+          function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("tb");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+      </script>
+ </body>
+ </html>

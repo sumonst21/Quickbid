@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id = "test">hhh</div>
+<form method="POST" action="https://localhost/eBay/login.php">
+
+<input type="username" name="username"/>
+<input type="password" name="password"/> 
+<input type="submit" />
+</form>
+<br/>
+Sign Up
+<form method="POST">
+USerNAme<input type="text" name="username" id="username"/>
+password<input type="password" name="password" id = "password"/> 
+fullname<input type="text" name="fullname" id = "fullname"/>
+email<input type="text" name="email" id = "email"/>
+phone<input type="text" name="phone" id = "phone"/>
+address<input type="text" name="address" id="address"/>
+<input type="submit" id = "register" />
+</form>
+
+<script>
+          $(document).ready(function(){
+          	//alert("hi");
+          	$("#register").click(function(e){
+          		 e.preventDefault()
+          		alert("testing");
+          		/*$.post('https://localhost/eBay/register.php', { username: $("#username").val(), password : $("#password").val(), fullname: $("#fullname").val(), email: $("#email").val(), phone: $("#phone").val(), address: $("#address").val()}, function(returnedData){
+        				alert(returnedData);
+        				//alert("now what???");
+        				var pp = document.createElement("p");
+        				pp.innerHTML= "howdy";
+        				document.body.appendChild(pp);
+				});*/
+
+				$.ajax({
+					url: "https://localhost/eBay/register.php",
+					type: "POST",
+					data: { username: $("#username").val(), password : $("#password").val(), fullname: $("#fullname").val(), email: $("#email").val(), phone: $("#phone").val(), address: $("#address").val()},
+					success: function(result,status,xhr){
+						alert(result);
+						$("div").append("<p>hi</p>");
+						$("#test").html("done");
+					},
+					error: function(text){
+						alert("error");
+						$("#test").html("not done");
+					}
+
+				});
+				
+				alert("bye");
+          	});
+          });
+
+</script>
+</body>
+</html>
